@@ -1,16 +1,26 @@
 #include <iostream>
-using namespace std;
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
-	float n, m, s;
-	cout << "inserisci il primo numero \t" <<
-	endl;					//fine comand0
-	cin >> n;
-		cout << "inserisci il secondo numero \t" <<
-			endl;
-			cin >> m;
-			s= m+n;
-			cout << "la somma e:\n"<< s << endl;
-	return 0;
+    double a, b;
+
+    std::cout << "Inserisci i coefficienti dell'equazione ax + b = 0:" << std::endl;
+    std::cout << "a: ";
+    std::cin >> a;
+    std::cout << "b: ";
+    std::cin >> b;
+
+    if (a == 0) {
+        if (b == 0) {
+            std::cout << "L'equazione è indeterminata (0 = 0)." << std::endl;
+        } else {
+            std::cout << "L'equazione è impossibile (" << b << " = 0)." << std::endl;
+        }
+    } else {
+        double x = -b / a;
+        std::cout << "La soluzione dell'equazione è x = " << x << std::endl;
+	}
+    
 }
+
